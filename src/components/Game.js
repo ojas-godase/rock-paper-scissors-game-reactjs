@@ -57,6 +57,7 @@ export default function Game() {
                 setWinner({text:"Oops... It's a draw. Play again" , backgroundColor:"#2b250a"})
             }
         }
+        Choice()
 }
     const[choice , setChoice] = React.useState({userchoice:"",compchoice:""})
     function handleUserChoice(event) {
@@ -66,6 +67,7 @@ export default function Game() {
             userchoice : event.target.id,
         }))
         handleScores()
+
     }
     function getRandomChoice() {
         const arr = ['Rock','Paper','Scissors']
@@ -75,10 +77,12 @@ export default function Game() {
             compchoice:arr[random]
         }))
     }
-    function displayChoice() {
-        if(score.userscore!=0 || score.compscore!=0) {
-            return <p id="displaychoice">You chose {choice.userchoice} & Computer chose {choice.compchoice}</p>
+    const[displayChoice , setDisplayChoice] = React.useState("")
+    function Choice() {
+        if(choice.userchoice!=0 && choice.compchoice!=0) {
+            setDisplayChoice(`You chose ${choice.userchoice} & Computer chose ${choice.compchoice}`)
         }
+        
     }
 
   return (
@@ -102,7 +106,7 @@ export default function Game() {
             <p id='msg' style={winner}>{winner.text}</p>
         </div>
         <div className="displaychoice">
-            {displayChoice()}
+            {displayChoice}
         </div>
     </div>
   )
