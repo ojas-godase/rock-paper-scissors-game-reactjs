@@ -105,9 +105,9 @@ export default function Game() {
         <div className="display">
             <p id='msg' style={winner}>{winner.text}</p>
         </div>
-        <div className="displaychoice">
-            {displayChoice}
-        </div>
+        // <div className="displaychoice">
+        //     {displayChoice}
+        // </div>
     </div>
   )
 }
