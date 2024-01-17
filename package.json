@@ -1,7 +1,7 @@
 {
+  "homepage": "https://ojas-godase.github.io/rock-paper-scissors-game-reactjs",
   "name": "rock_paper_scissors",
   "version": "0.1.0",
-  "homepage": "https://ojas-godase.github.io/ReactJS-Projects",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
